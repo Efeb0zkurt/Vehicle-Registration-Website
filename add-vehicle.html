@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Add Vehicle</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Accessibility improvements */
+    a, button {
+      min-height: 44px;
+      min-width: 44px;
+      display: inline-block;
+      padding: 10px;
+      margin: 6px;
+    }
+
+    header ul {
+      display: flex;
+      gap: 10px;
+      list-style: none;
+      padding: 0;
+    }
+
+    header ul li a {
+      text-decoration: none;
+      color: blue;
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <header>
+      <ul>
+        <li><a href="index.html">People search</a></li>
+        <li><a href="vehicle-search.html">Vehicle search</a></li>
+        <li><a href="add-vehicle.html">Add a vehicle</a></li>
+      </ul>
+    </header>
+
+    <aside>
+      <img src="https://via.placeholder.com/150" alt="add vehicle image" />
+    </aside>
+
+    <main>
+      <h1>Add a Vehicle</h1>
+
+      <label for="rego">Registration:</label>
+      <input id="rego" type="text" />
+
+      <label for="make">Make:</label>
+      <input id="make" type="text" />
+
+      <label for="model">Model:</label>
+      <input id="model" type="text" />
+
+      <label for="colour">Colour:</label>
+      <input id="colour" type="text" />
+
+      <label for="owner">Owner Name:</label>
+      <input id="owner" type="text" />
+
+      <button onclick="checkOwner()">Check Owner</button>
+
+      <div id="owner-results"></div>
+      <div id="message-owner"></div>
+
+      <h2>New Owner (if not found)</h2>
+
+      <label for="name">Name:</label>
+      <input id="name" type="text" />
+
+      <label for="address">Address:</label>
+      <input id="address" type="text" />
+
+      <label for="dob">DOB:</label>
+      <input id="dob" type="date" />
+
+      <label for="license">License Number:</label>
+      <input id="license" type="text" />
+
+      <button onclick="addOwner()">Add Owner</button>
+
+      <br /><br />
+      <button onclick="addVehicle()">Add Vehicle</button>
+      <div id="message-vehicle"></div>
+    </main>
+
+    <footer>
+      <p>COMP1004 Coursework</p>
+    </footer>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@1.35.6"></script>
+  <script src="script.js"></script>
+</body>
+</html>

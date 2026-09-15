@@ -1,0 +1,18 @@
+{
+  "name": "databasecoursework",
+  "version": "1.0.0",
+  "description": "## Student Info - Name: Efe Bozkurt - Student ID: 20675226",
+  "main": "script.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.52.0"
+  }
+}

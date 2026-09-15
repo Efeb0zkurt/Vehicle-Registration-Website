@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Vehicle Search</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Accessibility fixes */
+    a, button {
+      min-height: 44px;
+      min-width: 44px;
+      display: inline-block;
+      padding: 10px;
+      margin: 6px;
+    }
+
+    header ul {
+      display: flex;
+      gap: 10px;
+      list-style: none;
+      padding: 0;
+    }
+
+    header ul li a {
+      text-decoration: none;
+      color: blue;
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <header>
+      <ul>
+        <li><a href="index.html">People search</a></li>
+        <li><a href="vehicle-search.html">Vehicle search</a></li>
+        <li><a href="add-vehicle.html">Add a vehicle</a></li>
+      </ul>
+    </header>
+
+    <aside>
+      <img src="https://via.placeholder.com/150" alt="vehicle image" />
+    </aside>
+
+    <main>
+      <h1>Vehicle Search</h1>
+      <form onsubmit="searchVehicle(); return false;">
+        <label for="rego">Registration:</label>
+        <input id="rego" type="text" />
+        <button type="submit">Submit</button>
+      </form>
+      <div id="message"></div>
+      <div id="results"></div>
+    </main>
+
+    <footer>
+      <p>COMP1004 Coursework</p>
+    </footer>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@1.35.6"></script>
+  <script src="script.js"></script>
+</body>
+</html>
